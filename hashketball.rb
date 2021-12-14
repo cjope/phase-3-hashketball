@@ -1,4 +1,6 @@
-# Write your code below game_hash
+require "pry"
+# require "./hasketball.rb"
+
 def game_hash
   {
     home: {
@@ -126,4 +128,9 @@ def game_hash
   }
 end
 
-# Write code here
+
+
+def team_colors(team_name)
+  team = game_hash.filter{|location, team_data| team_data[:team_name] == team_name}
+  team[:colors]
+end
